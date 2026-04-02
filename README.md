@@ -12,7 +12,15 @@ An interactive, AI-driven recommendation engine tailored for Indian farmers, app
 - `backend/` - FastAPI service exposing `/health`, `/predict`, and `/model-metrics`.
 - `frontend/` - React frontend (Vite).
 
-## Setup & Running
+## Local Deployment
+
+**Quick Start:**
+```bash
+# One-click deployment
+deploy_local.bat
+```
+
+**Manual Setup:**
 
 **1. Create a Python Virtual Environment & Install:**
 ```bash
@@ -44,7 +52,18 @@ npm install
 npm run dev
 ```
 
-## Deployment
+## Access Points
+- **Frontend Application**: http://localhost:5173
+- **Backend API**: http://127.0.0.1:8000
+- **API Documentation**: http://127.0.0.1:8000/docs
+
+## Deployment Scripts
+- `deploy_local.bat` - One-click local deployment
+- `start_backend.bat` - Start backend server only
+- `start_frontend.bat` - Start frontend server only
+- `github_push.bat` - Push changes to GitHub
+
+## Cloud Deployment
 - **Frontend** can be deployed directly via Vercel or Netlify simply by uploading the `frontend/` folder.
 - **Backend** can be hosted on Render or Railway by pointing it to the root project with build script `pip install -r requirements.txt` and start command `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`.
 
