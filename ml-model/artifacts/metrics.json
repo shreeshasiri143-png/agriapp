@@ -1,0 +1,140 @@
+{
+    "best_model": "RandomForest",
+    "metrics": {
+        "RandomForest": {
+            "untuned": {
+                "accuracy": 1.0,
+                "f1_score": 1.0
+            },
+            "tuned": {
+                "accuracy": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1_score": 1.0,
+                "best_params": {
+                    "max_depth": 10,
+                    "n_estimators": 100
+                },
+                "confusion_matrix": [
+                    [
+                        79,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        0,
+                        58,
+                        0,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        39,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        124
+                    ]
+                ]
+            }
+        },
+        "GradientBoosting": {
+            "untuned": {
+                "accuracy": 1.0,
+                "f1_score": 1.0
+            },
+            "tuned": {
+                "accuracy": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1_score": 1.0,
+                "best_params": {
+                    "learning_rate": 0.1,
+                    "max_depth": 3,
+                    "n_estimators": 100
+                },
+                "confusion_matrix": [
+                    [
+                        79,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        0,
+                        58,
+                        0,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        39,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        124
+                    ]
+                ]
+            }
+        },
+        "XGBoost": {
+            "untuned": {
+                "accuracy": 1.0,
+                "f1_score": 1.0
+            },
+            "tuned": {
+                "accuracy": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1_score": 1.0,
+                "best_params": {
+                    "learning_rate": 0.1,
+                    "max_depth": 3,
+                    "n_estimators": 100
+                },
+                "confusion_matrix": [
+                    [
+                        79,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        0,
+                        58,
+                        0,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        39,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        124
+                    ]
+                ]
+            }
+        }
+    },
+    "classes": [
+        "DAP",
+        "MOP",
+        "NPK 19-19-19",
+        "NPK 20-20-20",
+        "Urea"
+    ]
+}

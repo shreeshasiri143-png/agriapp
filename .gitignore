@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pkl
+node_modules/
+.env
+.DS_Store
+dist/
+build/
+coverage/
