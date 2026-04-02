@@ -73,6 +73,19 @@ def calculate_quantity(recommendation, N, P, K):
     else:
         return 90
 
+@app.get("/")
+def root():
+    return {
+        "message": "Fertilizer Recommendation API",
+        "version": "1.0.0",
+        "endpoints": {
+            "health": "/health",
+            "predict": "/predict",
+            "metrics": "/model-metrics",
+            "docs": "/docs"
+        }
+    }
+
 @app.get("/health")
 @app.get("/api/health")
 def health_check():
