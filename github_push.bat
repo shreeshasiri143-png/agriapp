@@ -1,22 +1,42 @@
 @echo off
-echo Attempting to initialize and push to GitHub...
+echo ========================================
+echo  Pushing AgriApp to GitHub
+echo  Repository: https://github.com/shreeshasiri143-png/agriapp
+echo ========================================
+echo.
 
-git init
-if %errorlevel% neq 0 (
-    echo.
-    echo ERROR: "git" is still not recognized. 
-    echo Please install Git for Windows (https://git-scm.com/download/win) 
-    echo OR ensure C:\Program Files\Git\cmd is in your Windows Path.
-    pause
-    exit /b
-)
-
-git add .
-git commit -m "Auto-commit: AgriApp System"
-git branch -M main
-git remote add origin https://github.com/shreeshasiri143-png/agriapp.git
-git push -u origin main
+echo Checking git status...
+git status
 
 echo.
-echo Process complete!
+echo Adding all changes...
+git add .
+
+echo.
+echo Committing changes...
+set /p commit_msg="Enter commit message (or press Enter for default): "
+if "%commit_msg%"=="" set commit_msg=Update AgriApp - Fertilizer Recommendation System
+
+git commit -m "%commit_msg%"
+
+echo.
+echo Pushing to GitHub...
+echo Note: You may need to authenticate in your browser
+git push origin main
+
+if %errorlevel% equ 0 (
+    echo.
+    echo ========================================
+    echo  SUCCESS! Code pushed to GitHub
+    echo  Repository: https://github.com/shreeshasiri143-png/agriapp
+    echo ========================================
+) else (
+    echo.
+    echo ========================================
+    echo  Push failed. Please check authentication
+    echo  and try again.
+    echo ========================================
+)
+
+echo.
 pause
